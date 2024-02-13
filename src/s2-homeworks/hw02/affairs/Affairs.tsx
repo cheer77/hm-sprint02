@@ -4,24 +4,24 @@ import { AffairType, FilterType } from "../HW2";
 import s from "./Affairs.module.css";
 
 type AffairsPropsType = {
-  data: AffairType[]; // Исправляем any на AffairType[]
-  setFilter: (filter: FilterType) => void; // Указываем тип функции для setFilter
-  deleteAffairCallback: (id: number) => void; // Указываем тип функции для deleteAffairCallback
+  data: AffairType[];
+  setFilter: (filter: FilterType) => void;
+  deleteAffairCallback: (id: number) => void;
   filter: FilterType;
 };
 
 function Affairs(props: AffairsPropsType) {
   const setAll = () => {
-    props.setFilter("all"); // Устанавливаем фильтр на 'all'
+    props.setFilter("all");
   };
   const setHigh = () => {
-    props.setFilter("high"); // Устанавливаем фильтр на 'high'
+    props.setFilter("high");
   };
   const setMiddle = () => {
-    props.setFilter("middle"); // Устанавливаем фильтр на 'middle'
+    props.setFilter("middle");
   };
   const setLow = () => {
-    props.setFilter("low"); // Устанавливаем фильтр на 'low'
+    props.setFilter("low");
   };
 
   const cnAll =
